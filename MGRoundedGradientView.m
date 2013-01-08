@@ -101,14 +101,4 @@
   return gradientLayer;
 }
 
-- (UIImage *)imageFromLayer:(CALayer *)layer {
-  
-  UIGraphicsBeginImageContext([layer frame].size);
-  [layer renderInContext:UIGraphicsGetCurrentContext()];
-  UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-  UIGraphicsEndImageContext();
-  
-  return image;
-}
-
 @end
