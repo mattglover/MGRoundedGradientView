@@ -7,7 +7,6 @@
 //
 
 #import "MGRoundedGradientView.h"
-
 #import <QuartzCore/QuartzCore.h>
 
 #define DEFAULT_WIDTH  300.0f
@@ -82,7 +81,7 @@
   CAShapeLayer *shapeLayer = [CAShapeLayer layer];
   [shapeLayer setBounds:bounds];
   [shapeLayer setPath:[self shapeBezierPath].CGPath];
-  [shapeLayer setStrokeColor:[UIColor blackColor].CGColor];
+  [shapeLayer setStrokeColor:self.borderColor.CGColor];
   [shapeLayer setLineWidth:DEFAULT_BORDER_WIDTH];
   
   return shapeLayer;
